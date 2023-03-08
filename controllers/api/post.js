@@ -33,6 +33,7 @@ router.post("/", withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
 router.delete("/:id", withAuth, (req, res) => {
   console.log(req.body, req.params.id)
   Post.destroy({
